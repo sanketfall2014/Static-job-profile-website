@@ -1,0 +1,52 @@
+#body1{
+background-color:LightCyan;
+
+}
+
+a:link {
+    color: #FF0000;
+}
+
+a:visited {
+    color: #00FF00;
+}
+
+a:hover {
+    color: #FF00FF;
+}
+
+a:active {
+    color: #0000FF;
+}
+.table{
+	width:50%;
+	border: 2px solid black;
+    border-collapse: collapse;
+	text-align:center;
+    
+	}
+
+.heading{
+	color: red;
+}
+	
+#thi, #tdi {
+	border: 2px solid black;
+    border-collapse: collapse;
+	text-align:center;
+    padding: 15px;
+}
+
+#style{
+font:italic bold;
+}
+
+#div1 
+{width:350px;height:70px;padding:10px;border:1px solid #aaaaaa;}
+
+ul, li{
+	list-style-type: solid;
+	
+	
+	padding: 7px 15px;
+	margin: 0;

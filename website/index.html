@@ -1,0 +1,314 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Corporate World">
+<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+<meta name="author" content="Sanket Prabhu">
+<link rel="stylesheet" type="text/css" href="firststyle.css">
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.aa {
+    float: left;
+	
+}
+
+.a1 {
+    display: block;
+    width: 60px;
+    background-color: LightCyan;
+}
+</style>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script>
+$(document).ready(function(){
+$("#hide").click(function(){
+$("p").hide();
+});
+$("#show").click(function(){
+$("p").show();
+});
+});
+</script>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#toggle").click(function(){
+        $("h3").toggle();
+    });
+});
+</script>
+
+<script>
+$(document).ready(function(){
+$("#add").click(function(){
+$('#myTable tr:last').after('<tr><td id="tdi">4</td><td id="tdi">Advertising spending in TV segment</td><td id="tdi">38%</td><td id="tdi"><input type="button" class="deleteRow" value="DELETE"/></td></tr>');
+});
+});
+</script>
+
+<script>
+jQuery(document).ready(function () {
+        jQuery("#myTable").on('click', '.deleteRow', function () {
+            jQuery(this).parent().parent().remove();
+        });
+		});
+</script>
+<script>
+$(document).ready(function(){
+jQuery("#mouseEnterLeave").mouseenter(function () {
+            jQuery("#mouseEnterLeave").animate({opacity: .5});
+        });
+		
+        jQuery("#mouseEnterLeave").mouseleave(function () {
+            jQuery("#mouseEnterLeave").animate({opacity: 1}, function () {
+                alert("The opacity is set back to normal and this is called from the mouseleave callback function!");
+            });
+        });
+		jQuery(".fadeToggle").dblclick(function () {
+            jQuery(".fadeTogglePara").fadeToggle("slow", "linear");
+        });
+		 jQuery("#fadeOut").dblclick(function () {
+            jQuery("#fadeOutPara").fadeOut("slow");
+        });
+		jQuery("#fadeTo").dblclick(function () {
+            jQuery("#fadeToPara").fadeTo("slow", 0.33);
+        });
+		jQuery("#fadeIn").dblclick(function () {
+            jQuery("#fadeInPara").fadeIn("slow");
+        });
+		
+		        jQuery("[class]").mouseover(function (e) {
+            if(e.altKey){
+                jQuery(this).css("background-color","white");
+            }
+        });
+        jQuery("[class]").mouseout(function (e) {
+                jQuery(this).css("background-color","LightCyan");
+        });
+        jQuery(".rowHover").keyup(function () {
+				alert("here");
+                jQuery(this).css("background-color","LightCyan");
+        });
+		
+		
+		    jQuery(".rowHover1").mouseover(function (e) {
+            if(e.altKey){
+                jQuery(this).css("background-color","white");
+            }
+        });
+        jQuery(".rowHover1").mouseout(function (e) {
+                jQuery(this).css("background-color","green");
+        });
+        jQuery(".rowHover1").keyup(function () {
+				alert("here");
+                jQuery(this).css("background-color","green");
+        });
+		
+		
+		
+		
+		
+		
+		
+		});
+</script>
+</head>
+
+<body id="body1">
+<font face="verdana">
+<ul>
+  <li class="aa"><a style="color:black" class="a1" href="index.html">Home</a></li>
+  <li class="aa"><a style="color:black" class="a1" href="sc.html">Buy Books</a></li>
+  
+
+</ul>
+<marquee><h1>ASynchronous Solutions</h1></marquee>
+
+<center><h1 id="style">Introduction</h1></center><br><br>
+
+<section>
+<p>
+<img src="1.png"  id="mouseEnterLeave" alt="Image" height="300" width="500" style="float:left">
+
+Since its founding in 1984, Smart Software has been a leader in providing enterprise-wide demand forecasting, demand planning, and inventory optimization solutions. Today thousands of manufacturing, marketing and inventory professionals around the globe use our flagship product, SmartForecasts®, to plan for demand and drive a more efficient supply chain. Our customers include industry leaders such as Monsanto, Mitsubishi, Siemens, Abbott Laboratories, Disneyland Resorts, GE and The Coca-Cola Company, as well as hundreds of mid- and small market enterprises.
+Our success is built on continuous innovation. We listen to our customers and consistently deliver what they need next. Our patented, award-winning method for intermittent demand forecasting, for instance, has yielded major inventory cost reductions for many of our customers. We also pioneered the use of automatic statistical forecasting, product line forecasting, interactive graphical adjustment of forecast results to reflect business judgment, and other innovations designed to make the forecasting process easy, realistic, and accurate.
+Smart Software can help you incorporate state-of-the-art sales and demand forecasting solutions into your business, optimize safety stocks and service level inventory requirements, and develop or improve your S&OP process.
+With these solutions, you can manage the future of your business much more effectively. You can increase forecast accuracy, reduce inventory levels, improve customer service, take control of your supply chain, and save millions of dollars annually—because with Smart Software, you See What's Next!
+Smart Software delivers its solutions and services directly and through its network of partners and distributors. The company is headquartered in Belmont, Massachusetts.
+
+</p>
+</section>
+<br><br>
+<br>
+<center>
+<h1><b><i>Job Profiles</i></b></h1>
+</center>
+
+<dl>
+  <dt class="fadeToggle">Senior Software Developer</dt>
+  <dd class="fadeTogglePara">Can handle the entire software development life cycle, end to end You lead others and can self manage your projects</dd><br>
+  <dt id="fadeOut">IT Desktop Support Technician</dt>
+  <dd id="fadeOutPara">Evaluate candidates for desktop support technician</dd><br>
+  <dt id="fadeTo">Senior Digital Media Planner</dt>
+  <dd id="fadeToPara"> 100% responsible for executing the vision developed by the team as a whole</dd><br>
+  <dt id="fadeIn">PPC Lead</dt>
+  <dd id="fadeInPara" style="display:none">Pay Per Click - Advertisers (you) bid on keywords and pay a fee every time an ad is clicked by a searcher</dd><br>
+</dl>
+<center>
+<h1><b><i>Qualifications</i></b></h1>
+</center>
+<ul>
+ <li>A minimum of 3 years of online media planning experience in an interactive agency</li>
+ <li>Clear understanding of the digital media planning and buying process</li>
+ <li>Strong experience with 3rd party ad-servers</li>
+ <li>Able to pull research, rating and competitive information from differing available resources depending on context</li>
+ <li>Excellent negotiation and communication skills</li>
+ <li>Bachelors degree in advertising, marketing or related program</li>
+ <li>Ability to understand client objectives and how they translate into media strategies</li>
+ <li>Automotive experience a definite plus</li>
+</ul>
+
+<center>
+<h1><b><i>Number of Openings</i></b></h1>
+</center>
+<ol>
+ <li>Senior Software Developer : 6</li>
+ <li>IT Desktop Support Technician : 2</li>
+ <li>Senior Digital Media Planner : 1</li>
+ <li>PPC Lead : 1</li>
+</ol>
+
+
+
+<center>
+
+
+<h1><b><i>Apply Here</i></b></h1><br>
+<img src="job.png" usemap="#jobmap">
+<map name="jobmap">
+  <area shape="rect" coords="0,0,175,100" alt="S_job" href="homework1.html">
+  <area shape="rect" coords="175,0,350,100" alt="IT_job" href="homework2.html">
+  <area shape="rect" coords="0,100,175,200" alt="SD_job" href="homework3.html">
+  <area shape="rect" coords="175,100,350,200" alt="PP_job" href="homework4.html">
+
+  
+  </map>
+</center>
+
+
+
+<center><h1><b><i>Company Statistics</h1></i></b></center>
+
+<table align="center" class="table" id="myTable">
+  <tr>
+	<td bgcolor="green" id="tdi" class="rowHover1"><b>Sr NO</b></td>
+    <td bgcolor="green" id="tdi" class="rowHover1"><b>Company and Brand facts</b></td>
+    <td bgcolor="green" id="tdi" class="rowHover1"><b>Values</b></td>
+	<td bgcolor="green" class="rowHover1" id="tdi"><input type="button" class="deleteRow" value="DELETE"/></td>
+  </tr>
+  <tr>
+	<td id="tdi" class="rowHover">1</td>
+    <td id="tdi" class="rowHover">Global net operating revenue of company</td>
+    <td id="tdi" class="rowHover">$46,854m</td>
+	<td class="rowHover" id="tdi"><input type="button" class="deleteRow" value="DELETE"/></td>
+	
+    </tr>
+  <tr>
+  <td id="tdi" class="rowHover">2</td>
+    <td id="tdi" class="rowHover">Revenue distribution share</td>
+    <td id="tdi" class="rowHover">46.1%</td>	
+    <td class="rowHover" id="tdi"><input type="button" class="deleteRow" value="DELETE"/></td>	
+    </tr>
+	  <tr>
+	  <td id="tdi" class="rowHover">3</td>
+    <td id="tdi" class="rowHover">Advertising spending in TV segment</td>
+    <td id="tdi" class="rowHover">38%</td>	
+	<td class="rowHover" id="tdi"><input type="button" class="deleteRow" value="DELETE"/></td>
+    </tr>
+	</table>
+	<br><br>
+	<center>
+	<button id="add"><b>Add row to table</b></button>
+	
+	</center>
+<br><br>
+
+<center><h1><b><i>Intern Fair at University of Texas at Dallas</h1></i></b>
+For more details visit<br> <a href="http://cs.utdallas.edu/">University of Texas at Dallas CS Department</a></center>
+<br><br>
+
+
+<center><h1><b><i>Help</i></b></h1>
+
+<p id="demo"><h3><b>Click the button to get help to reach our office</b></h3></p>
+
+<button onclick="getLocation()"><b>Get Your Current Location</b></button>
+
+<div id="mapholder"></div>
+
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition, showError);
+    } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+
+function showPosition(position) {
+    var latlon = position.coords.latitude + "," + position.coords.longitude;
+
+    var img_url = "http://maps.googleapis.com/maps/api/staticmap?center="
+    +latlon+"&zoom=14&size=400x300&sensor=false";
+    document.getElementById("mapholder").innerHTML = "<img src='"+img_url+"'>";
+}
+
+function showError(error) {
+    switch(error.code) {
+        case error.PERMISSION_DENIED:
+            x.innerHTML = "User denied the request for Geolocation."
+            break;
+        case error.POSITION_UNAVAILABLE:
+            x.innerHTML = "Location information is unavailable."
+            break;
+        case error.TIMEOUT:
+            x.innerHTML = "The request to get user location timed out."
+            break;
+        case error.UNKNOWN_ERROR:
+            x.innerHTML = "An unknown error occurred."
+            break;
+    }
+}
+</script
+<br><br>
+
+<footer>
+	<h1>Click here to contact me</h1>
+	<button id="show"><b>Contact Sanket</b></button>
+	<button id="hide"><b>No thanks</b></button>
+  <p>Contact information: <a href="mailto:sanket.prabhu@utdallas.edu">
+  Contact Sanket</b></a></p>
+  <br><br>
+  <button id="toggle"><b>Wanna See Author?</button>
+  
+  <h3 style="display:none"><b>Posted by: Sanket Prabhu</b></h3></p>
+  
+</footer>
+<center>
+</font>
+</body>
+</html>

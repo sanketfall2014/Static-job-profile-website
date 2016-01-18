@@ -1,0 +1,43 @@
+body{
+    padding-left:20px;
+    padding-right:20px;
+    background-color:#F0FFF0;
+    }
+footer{
+    font-weight:bold;
+    }
+    div.hr_line{
+    margin-top:50px;
+    }
+.horizontal_line{
+    display:block;
+    border:none;
+    color:white;
+    height:1px;
+    background:black;
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#000), to(#fff));
+    }
+input{
+    max-width:300px;
+    }
+.FormInfo{
+    margin:auto;
+    padding:auto;
+}
+a:hover{
+   text-decoration:none !important;
+}
+#my_availability{
+    padding-top:5px;
+}
+#my_photo{
+    width:50px;
+    height:50px;
+}
+#InputMale,#InputFemale{
+    padding-top:2px;
+}
+#table_skills{
+    padding-top:5px;
+    display:none;
+}

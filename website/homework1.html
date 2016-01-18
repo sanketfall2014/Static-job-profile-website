@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="firststyle.css">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script>
+<script>
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+}
+</script>
+<script>
+$(document).ready(function(){
+jQuery("#changeTextField").change(function(e){
+            alert("Welcome: " + $("#changeTextField").val());
+        });
+		jQuery("#focusTextField").focus(function(e){
+            jQuery("#focusTextField").attr("value","Enter your email id here");
+        })
+		    jQuery("[id=textBoxKeypress]").keypress(function (e) {
+            jQuery("#11").fadeIn("slow");
+            jQuery("#11").fadeOut("slow");
+            jQuery("#11").fadeIn(5000);
+        });
+		 jQuery("[id=textBoxKeyDown]").keydown(function (e) {
+            jQuery("#12").fadeIn("slow");
+            jQuery("#12").animate({height: 200}, "slow");
+            jQuery("#12").animate({width: 200}, "slow");
+            jQuery("#12").animate({height: 100}, "slow");
+            jQuery("#12").animate({height: 200}, "slow");
+            jQuery("#12").animate({height: 100}, "slow");
+        });
+        jQuery("#textBoxKeyDown").keyup(function (e) {
+            jQuery("#12").stop();
+        });
+		        jQuery("#blurTextField").blur(function(){
+            alert("The name you entered is : " + $("#blurTextField").val());
+        });
+		});
+</script>
+
+
+
+</head>
+<body background="abc.jpg.jpg">
+<font class="heading">
+<font face="verdana">
+<ul style="list-style-type:none">
+<li class="aa"><a class="a1" href="index.html" style="color:white" >Home</a></li></ul></font>
+<center><h1>Application for Senior Software Developer</h1></center></font>
+<font color="white">
+
+
+<h3><b>Registration Form:</b></font>
+<form method="get"><br>
+<font color="white">
+<b>First name:</b> <input type="text" id="changeTextField" value="Sanket" name="fname" required><br><br>
+<b>Last name:</b>  <input type="text" name="lname" id="blurTextField"><br><br>
+<b>Email:</b>  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="email" id="focusTextField" name="lname" required><br><br>
+<b>Contact Number:</b>  <input type="number" name="lname" id="textBoxKeyDown" required> <br><img src="tel.jpg" id="12" height="50" width="50"><br><br>
+<b>Sex:</b><br>
+<input type="radio" name="sex" value="male"><b>Male</b><br>
+<input type="radio" name="sex" value="female"><b>Female</b><br><br>
+<b>GPA:</b><br>
+
+<input type="radio" name="gpa" value="Below 3"><b>Below 3.0</b><br>
+<input type="radio" name="gpa" value="3.0-3.5"><b>3.0-3.5</b><br>
+<input type="radio" name="gpa" value="3.5-3.99"><b>3.5-3.99</b><br>
+<input type="radio" name="gpa" value="4.0"><b>4.0</b><br><br>
+<b>Languages you are comfortable with:</b><br>
+<input type="checkbox" name="Lang" value="C"> <b>C</b><br>
+<input type="checkbox" name="Lang" value="C++"> <b>C++</b><br>
+<input type="checkbox" name="Lang" value="Java"> <b>Java</b><br>
+<input type="checkbox" name="Lang" value="Ruby"> <b>Ruby</b><br>
+<input type="checkbox" name="Lang" value="PHP"> <b>PHP</b><br><br>
+
+
+
+<p>Drag your Resume in box to submit</p>
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<br>
+<b>Comment on your resume:</b> <input type="text" id="textBoxKeypress" name="comment"><br><br>
+<h2 id="11">Typing...</h2>
+
+<img id="drag1" src="resume.png" draggable="true" ondragstart="drag(event)" width="336" height="69">
+</font>
+</body>
+<head>
+<script>
+function clickCounter() {
+    if(typeof(Storage) !== "undefined") {
+        if (localStorage.clickcount) {
+            localStorage.clickcount = Number(localStorage.clickcount)+1;
+        } else {
+            localStorage.clickcount = 1;
+        }
+        document.getElementById("result").innerHTML = "You have Submitted Application to " + localStorage.clickcount + " Position(s).";
+    } else {
+        document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+    }
+}
+</script>
+</head>
+<head>
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.aa {
+    float: left;
+	
+}
+
+.a1 {
+    display: block;
+    width: 60px;
+   
+}
+</style>
+</head>
+<body>
+<font color="white">
+<form>
+<br><br>
+<input type="submit" value="Submit">
+<button type="reset" value="Reset">Reset</button><br><br>
+<button onclick="clickCounter()" type="button">Click here for Final Submission of your application</button>
+
+<div id="result"></div>
+</font>
+</form>
+
+</body>
+</html>
